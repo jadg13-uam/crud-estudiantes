@@ -9,7 +9,7 @@ public class EstudianteServiceTest {
     @Test
     void testAgregarYListar() {
         EstudianteService service = new EstudianteService();
-        service.agregar(new Estudiante(1, "Juan"));
+        service.agregar(new Estudiante(1, "Juan Lopez"));
 
         assertEquals(1, service.listar().size());
     }
@@ -17,7 +17,7 @@ public class EstudianteServiceTest {
     @Test
     void testBuscar() {
         EstudianteService service = new EstudianteService();
-        service.agregar(new Estudiante(1, "Ana"));
+        service.agregar(new Estudiante(1, "Ana Perz"));
 
         assertNotNull(service.buscarPorId(1));
     }
@@ -25,7 +25,7 @@ public class EstudianteServiceTest {
     @Test
     void testActualizar() {
         EstudianteService service = new EstudianteService();
-        service.agregar(new Estudiante(1, "Luis"));
+        service.agregar(new Estudiante(1, "Luis Gomez"));
 
         service.actualizar(1, "Carlos");
         assertEquals("Carlos", service.buscarPorId(1).getNombre());
@@ -34,7 +34,7 @@ public class EstudianteServiceTest {
     @Test
     void testEliminar() {
         EstudianteService service = new EstudianteService();
-        service.agregar(new Estudiante(1, "Pedro"));
+        service.agregar(new Estudiante(1, "Pedro Salgado"));
 
         assertTrue(service.eliminar(1));
         assertNull(service.buscarPorId(1));
